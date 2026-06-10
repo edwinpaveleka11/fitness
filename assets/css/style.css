@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-primary: #1391ad;
+  --color-primary-dark: #0e7a93;
+  --color-accent: #f4cd00;
+}
+
+/* ---------- Tailwind Custom Colors ---------- */
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.hover\:text-primary:hover {
+  color: var(--color-primary);
+}
+.hover\:bg-primary-dark:hover {
+  background-color: var(--color-primary-dark);
+}
+.hover\:text-accent:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+p,
+span,
+a,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Header ---------- */
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header a {
+  text-decoration: none;
+}
+
+header ul li a {
+  position: relative;
+  transition: color 0.2s;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  left: 0;
+  bottom: -4px;
+  transition: width 0.25s ease;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Mobile Menu ---------- */
+#mobile-menu a {
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: block;
+}
+
+/* ---------- Hero Section ---------- */
+#hero img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Features Banner ---------- */
+#features {
+  background-color: var(--color-primary);
+}
+
+#features span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* ---------- About Section ---------- */
+#about {
+  background-color: #0a0a0a;
+}
+
+/* Video Banner: play button hover */
+.play-btn {
+  background-color: #e53e3e;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 8px rgba(229, 62, 62, 0.25);
+}
+
+/* Contact Card icon circle */
+.icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: rgba(19, 145, 173, 0.1);
+  color: var(--color-primary);
+}
+
+/* Contact Now button */
+a[href="#"].contact-now,
+a.inline-block.bg-primary {
+  background-color: var(--color-primary);
+  transition: background-color 0.2s;
+}
+
+a.inline-block.bg-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ---------- Trainer Section ---------- */
+#trainer {
+  background-color: #000000;
+}
+
+.trainer-card h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Trainer header image*/
+.trainer-header-img {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ---------- Review Section ---------- */
+#review {
+  background-color: #000000;
+}
+
+.review-card {
+  background: #ffffff;
+  color: #000;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ---------- CTA Section ---------- */
+#cta {
+  background-color: var(--color-primary);
+}
+
+#cta h2 {
+  color: #ffffff;
+}
+
+#cta a {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.65rem 2rem;
+  transition: filter 0.2s;
+}
+
+#cta a:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--color-primary);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+footer ul li a:hover {
+  color: var(--color-accent);
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.3);
+}
