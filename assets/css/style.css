@@ -246,3 +246,37 @@ footer ul li a:hover {
 footer hr {
   border-color: rgba(255, 255, 255, 0.3);
 }
+
+
+/* ---------- Responsive Utilities ---------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  #features .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    row-gap: 0.75rem;
+  }
+
+  .trainer-header-img {
+    width: 100% !important;
+    height: 160px !important;
+  }
+
+  .trainer-card div {
+    height: 160px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #cta .container > div {
+    flex-direction: column;
+    text-align: center;
+  }
+}
